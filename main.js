@@ -1,34 +1,53 @@
 //Add
-function add(x,y){
-    return x+y;
-
-}
-document.write(add(2,4)+"<br>")
-
+function add(a,b) {
+    let total = (a+b);
+    document.write(total);
+    return (total);
 //Multiply
 function multiply(x,y){
     let total=0;
-    for(let i=1;i<y;i++){
-        total=add(6,total)
+    for(let i=0;i<y;i++){
+        total=add(total,x);
     }
-    return total
+    document.write(total);
+    return (total);
+    
 }
 document.write(multiply(5,8)+"<br>")
 //Power
 function power(x,y) {
     let total=1;
     for(let i=0;i<y;i++){
-        total+=multiply(x,x)
+        total=multiply(total,x);
     }
-    console.log(total);
+    document.write(total);
     return(total);
 }
 //Factorial
 function factorial(x){
-    
+    let total= 0;
+    for (let i= (x-1); i > 0; i--) {
+        total +=multiply(a, i);
+    }
+    document.write(total);
+    return (total);
 }
 //Fibonacci
 function fibonacci(x){
-
+    let f0=0;
+    let f1= 1;
+    let temp= 0;
+    for (let i=2; i > x; i++) {
+        temp = f1;
+        f1= add(f0,f1);
+        f0=temp;
+    }
+    document.write(total);
+    return (f1);
 }
-console.log(power(2,8));
+document.write(add(2,4));
+document.write(multiply(6,8));
+document.write(power(2,8));
+document.write(factorial(4));
+document.write(fibonacci(8))
+}
