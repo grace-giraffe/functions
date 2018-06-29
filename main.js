@@ -8,26 +8,27 @@ document.write(add(2,4)+"<br>")
 //Multiply
 function multiply(x,y){
     let total=0;
-    for(var i=1;i<y;i++){
-        total=add(x,total)
+    for(let i=1;i<y;i++){
+        total=add(6,total)
     }
     return total
 }
-document.write(multiply(6,8)+"<br>")
+document.write(multiply(5,8)+"<br>")
 //Power
-function power(x,y){
+function power(x,y) {
     let total=1;
-    for(var i=1;i<y;i++){
-        total=multiply(x,total)
+    for(let i=0;i<y;i++){
+        total+=multiply(x,x)
     }
-    return total
+    console.log(total);
+    return(total);
 }
-document.write(power(2,8)+"<br>")
 //Factorial
 function factorial(x){
-
+    
 }
 //Fibonacci
 function fibonacci(x){
 
 }
+console.log(power(2,8));
